@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINCITY Plan</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> <!-- Changed font to Poppins -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Updated font family */
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #a8c0ff, #3faffa);
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #003366;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2rem;
+            color: #003366;
+            background-color: #f3e05d;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        section {
+            margin: 30px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1000px;
+            color: #333;
+        }
+        ul, dl {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        dt {
+            font-weight: 500; /* Bold text */
+            margin-top: 10px;
+        }
+        dd {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #003366;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #005bb5;
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff; /* Keep text color white */
+            background: #003366;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #005bb5;
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+        
+        .business-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .business-card {
+            background: #e6f0ff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .business-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #003366;
+        }
+        .business-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .business-card li {
+            margin: 5px 0;
+            color: #555;
+        }
+        .business-card:hover {
+            
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .chart-score h2 {
+            font-size: 2.5rem;
+            color: #005bb5;
+        }
+        .team-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .score-bar span {
+            display: block;
+            height: 8px;
+            background-color: #003366;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>VINCITY</h1>
+
+<section>
+    <h2>Project Information</h2>
+    <dl>
+        <dt>Course Name:</dt>
+        <dd>Design and Analysis of Algorithms</dd>
+        <dt>Course Code:</dt>
+        <dd>24ECSC205</dd>
+        <dt>Course Instructor:</dt>
+        <dd>KMMR</dd>
+        <dt>University:</dt>
+        <dd>KLE Technological University, Hubballi-31</dd>
+        <dt>Portfolio Topic/Domain:</dt>
+        <dd>City Planning and Development</dd>
+    </dl>
+</section>
+
+    <section>
+    <h2>Member Details</h2>
+    <div class="business-cards">
+        <div class="business-card">
+            <h3>Name: Sujith Roy</h3>
+            <p>Division: F</p>
+            <p>Roll No: 138</p>
+            <p>USN: 01FE23BCI080</p>
+        </div>
+        <div class="business-card">
+            <h3>Name: Claudia Jesuraj</h3>
+            <p>Division: F</p>
+            <p>Roll No: 135</p>
+            <p>USN: 01FE23BCI073</p>
+        </div>
+        <div class="business-card">
+            <h3>Name: Bhagyashree</h3>
+            <p>Division: F</p>
+            <p>Roll No: 155</p>
+            <p>USN:01FE23BCI118</p>
+        </div>
+        <div class="business-card">
+            <h3>Name: Sneha</h3>
+            <p>Division: F</p>
+            <p>Roll No: 125</p>
+            <p>USN: 01FE23BCI054</p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>Selected Business Models</h2>
+    <div class="business-cards">
+        <div class="business-card">
+            <h3><a name="sujith">Sujith roy</a></h3>
+            <ul>
+                <li>Smart Parking Guidance:
+Real-time data on parking
+availability integrated into
+traffic systems to guide
+drivers directly to open spots,
+reducing unnecessary circling.</li>
+                <li>Traffic enforcement drones to
+reduce traffic.</li>
+            </ul>
+        </div>
+        
+        <div class="business-card">
+            <h3><a name="cl">Claudia jesuraj</a></h3>
+            <ul>
+                <li>Flood detection and rerouting monitor roads for flooding during heavy rains and provide instant detours to safer routes</li>
+                <li>Traffic enforcement drones to
+reduce traffic.</li>
+            </ul>
+        </div>
+        <div class="business-card">
+            <h3><a name="bh">Bhagyashree</a></h3>
+            <ul>
+                <li>Accident detection and
+response using ai powered
+cameras,alerting authorities,
+thus reduces the traffic</li>
+                <li>Delivery drones for reducing
+the use of delivery drivers
+thus, reduces the traffic.</li>
+            </ul>
+        </div>
+        <div class="business-card">
+            <h3><a name="sn">Sneha</a></h3>
+            <ul>
+                <li>Priority lanes for emergency
+services and heavy duty
+vehicles to deviate them to
+highways .</li>
+                <li>Delivery drones for reducing
+the use of delivery drivers
+thus, reduces the traffic.</li>
+            </ul>
+        </div>
+ <div class="business-cards">
+        <div class="business-card">
+            <h3><a name="sujith and claudia">Sujith and Claudia</a></h3>
+            <ul>
+                <li>
+                    Traffic enforcement drones to
+        reduce traffic.
+        </li>
+                
+            </ul>
+        </div>
+      <div class="business-cards">
+        <div class="business-card">
+            <h3><a name="bhagya and sneha">Bhagyashree and Sneha</a></h3>
+            <ul>
+                <li>
+                  Delivery drones for reducing
+the use of delivery drivers
+thus, reduces the traffic.
+        </li>
+                
+            </ul>
+        </div>
+     
+    
+     
+    </div>
+ 
+</section> 
+
+<section>
+    <h2>Details of Business Cases Identified</h2>
+    <p>CLICK ON THE BUTTONS BELOW:</p>
+    <div class="team-links">
+        <a href="Business Cases/sujith.html" target="_blank" class="btn">Sujith roy</a>
+        <a href="Business Cases/Claudia.html" target="_blank" class="btn">Claudia jesuraj</a>
+        <a href="Business Cases/bhagyashree.html" target="_blank" class="btn">Bhagyashree</a>
+        <a href="Business Cases/sneha.html" target="_blank" class="btn">Sneha</a>
+         <a href="Business Cases/s and c.html" target="_blank" class="btn">Sujith and Claudia</a>
+         <a href="Business Cases/b and s.html" target="_blank" class="btn">Bhagyashree and Sneha</a>
+    </div>
+</section>
+    <section>
+    <h2> LAB AND THEORY REFLECTIONS</h2>
+     <p>CLICK ON THE BUTTONS BELOW:</p>
+    <div class="business-cards">
+        <div class="business-card">
+            <h3>Sujith</h3>
+            <a href="reflection/sujith_theory.html" class="btn">Theory</a>
+            <a href="reflection/sujithlab.html" class="btn">Lab</a>
+        </div>
+        <div class="business-card">
+            <h3>Claudia</h3>
+            <a href="reflection/claudia_theory.html" class="btn">Theory</a>
+            <a href="reflection/claudia_lab.html" class="btn">Lab</a>
+        </div>
+         <div class="business-card">
+            <h3>Bhagyashree</h3>
+            <a href="reflection/bhagya_theory.html" class="btn">Theory</a>
+            <a href="reflection/bhagya_lab.html" class="btn">Lab</a>
+        </div>
+         <div class="business-card">
+            <h3>Sneha</h3>
+            <a href="reflection/sneha_theory.html" class="btn">Theory</a>
+            <a href="reflection/sneha_lab.html" class="btn">Lab</a>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h2> CODES FOR OUR COURSE PROJECTS</h2>
+     <p>CLICK ON THE BUTTONS BELOW:</p>
+    <div class="business-cards">
+        <div class="business-card">
+            <h3>Sujith</h3>
+            <a href="reflection/sujith-code.html" class="btn">code</a>
+            
+        </div>
+        <div class="business-card">
+            <h3>Claudia</h3>
+            <a href="reflection/claudia-code.html" class="btn">Code</a>
+           
+        </div>
+         <div class="business-card">
+            <h3>Bhagyashree</h3>
+            <a href="reflection/bhagya-code.html" class="btn">Code</a>
+            
+        </div>
+         <div class="business-card">
+            <h3>Sneha</h3>
+            <a href="reflection/sneha-code.html" class="btn">Code</a>
+            
+        </div>
+         <div class="business-card">
+            <h3>Sujith and Claudia</h3>
+            <a href="reflection/sujcla-code.html" class="btn">Code</a>
+            
+        </div>
+         <div class="business-card">
+            <h3>Bhagyashree and Sneha</h3>
+            <a href="reflection/bhasne-code.html" class="btn">Code</a>
+            
+        </div>
+         <div class="business-card">
+            <h3>Combined code</h3>
+            <a href="reflection/combined.html" class="btn">Code</a>
+            
+        </div>
+    </div>
+
+</section>
+
+
+
+
+</body>
+</html>
